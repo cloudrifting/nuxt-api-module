@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-api-module",
+  "version": "1.0.0",
+  "description": "Convention based api module for Nuxt.js",
+  "main": "lib/module.js",
+  "scripts": {
+    "release": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunchaserkuafu/nuxt-api-module.git"
+  },
+  "author": "sunchaserkuafu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunchaserkuafu/nuxt-api-module/issues"
+  },
+  "homepage": "https://github.com/sunchaserkuafu/nuxt-api-module#readme",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6"
+  }
+}

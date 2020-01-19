@@ -1,0 +1,18 @@
+<% if (options.apis && options.apis.length) { %>
+  <% for (let api of options.apis) { %>
+    import <%= api.name %> from '<%= api.path  %>'
+  <% } %>
+ <% } %>
+
+const createApi = $axios => ({
+  <% if (options.apis && options.apis.length) { %>
+    <% for (let api of options.apis) { %>
+      <%= api.name %> : <%= api.name %>($axios),
+    <% } %>
+   <% } %>
+})
+
+export default function(ctx, inject) {
+  ctx.$api = createApi(ctx.$axios)
+  inject('api', ctx.$api)
+}
