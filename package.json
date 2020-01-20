@@ -4,7 +4,8 @@
   "description": "Convention based api module for Nuxt.js",
   "main": "lib/module.js",
   "scripts": {
-    "release": "npm publish"
+    "release": "npm publish",
+    "lint": "node ./node_modules/eslint/bin/eslint.js --ext .js --ignore-path .gitignore . --fix"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,30 @@
     "url": "https://github.com/sunchaserkuafu/nuxt-api-module/issues"
   },
   "homepage": "https://github.com/sunchaserkuafu/nuxt-api-module#readme",
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.scss": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.6.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.16.4",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-prettier": "^1.1.1"
   }
 }
