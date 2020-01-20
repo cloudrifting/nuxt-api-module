@@ -1,6 +1,6 @@
 {
   "name": "nuxt-api-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convention based api module for Nuxt.js",
   "main": "lib/module.js",
   "scripts": {
